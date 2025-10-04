@@ -12,6 +12,9 @@
       --muted: #888888;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: Arial, sans-serif;
       color: var(--white);
@@ -155,66 +158,55 @@
     <div class="logo">Moonboy</div>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="work.html">My Work</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#work">My Work</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero">
-    <!-- you can embed a video or use a background video -->
+  <section class="hero" id="home">
     <video src="your-promo.mp4" autoplay muted loop></video>
     <div class="overlay"></div>
     <div class="content">
       <h1>Moonboy Editing</h1>
       <p>Custom YouTube video editing • Montages · Vlogs · Color Grading</p>
-      <a href="work.html" class="btn">See My Work</a>
+      <a href="#work" class="btn">See My Work</a>
     </div>
   </section>
 
-  <section id="featured">
-    <h2>Featured Projects</h2>
-    <div class="portfolio-grid">
-      <div class="card">
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-          <img src="https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Project 1">
-        </a>
-        <div class="info">
-          <h3>Gaming Montage</h3>
-          <p>3:24 • 2025</p>
-        </div>
+  <!-- ABOUT ME SECTION -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="color:#aaa;margin-bottom:20px;">
+      Hey! I’m <strong>Moonboy</strong> — a passionate YouTube video editor who loves turning raw footage into engaging stories.
+      I focus on creating edits that capture attention in the first few seconds, using cinematic pacing, smooth transitions, and clean sound design.
+    </p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;">
+      <div>
+        <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=900&q=60"
+             alt="Moonboy editing at work"
+             style="width:100%;border-radius:12px;">
       </div>
-      <!-- more project cards here -->
+      <div>
+        <h3>My Skills</h3>
+        <ul style="line-height:1.8;color:#bbb;">
+          <li>Professional editing with Adobe Premiere Pro & DaVinci Resolve</li>
+          <li>Sound design, SFX, and audio cleanup</li>
+          <li>After Effects intros and transitions</li>
+          <li>Color correction and cinematic grading</li>
+          <li>Thumbnail design and motion graphics</li>
+        </ul>
+        <p style="margin-top:10px;color:#999;">Let’s make your channel stand out with professional edits that hook viewers.</p>
+      </div>
     </div>
   </section>
 
-  <section id="services">
-    <h2>What I Do</h2>
-    <p>From jump cuts to cinematic color grading, I craft videos that keep viewers watching and coming back.</p>
-    <!-- you can list your services in cards or bullets -->
-  </section>
+  <!-- MY WORK SECTION -->
+  <section id="work">
+    <h2>My Work</h2>
+    <p style="color:#aaa;margin-bottom:24px;">Here are a few samples of my video editing projects. Click any vi
 
-  <footer>
-    <p>© 2025 Moonboy Editing. All rights reserved.</p>
-    <p>Email: <a href="mailto:moonboy@example.com">moonboy@example.com</a></p>
-  </footer>
-
-  <script>
-    // Change navbar background on scroll
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.remove('transparent');
-        navbar.classList.add('solid');
-      } else {
-        navbar.classList.remove('solid');
-        navbar.classList.add('transparent');
-      }
-    });
-  </script>
-
-</body>
-</html>
-
+      
