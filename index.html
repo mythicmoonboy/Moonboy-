@@ -72,140 +72,17 @@
       text-align: center;
       padding: 0 20px;
     }
-    .hero h1 { font-size: 3rem; margin-bottom: 1rem; max-width: 700px; }
-    .hero p { font-size: 1.2rem; color: var(--muted); margin-bottom: 2rem; }
-    .btn {
-      padding: 12px 24px;
-      background-color: var(--red);
-      border: none;
-      color: var(--white);
-      font-size: 1rem;
-      border-radius: 6px;
-      cursor: pointer;
+    .hero h1 { 
+      font-size: 3rem; 
+      margin-bottom: 1rem; 
+      max-width: 700px; 
+      text-shadow: 0 0 20px rgba(0,0,0,0.7);
     }
-    section {
-      padding: 80px 20px;
-      max-width: 1100px;
-      margin: 0 auto;
+    .hero p { 
+      font-size: 1.2rem; 
+      color: var(--muted); 
+      margin-bottom: 1rem; 
     }
-    footer {
-      background-color: var(--black);
-      color: var(--muted);
-      text-align: center;
-      padding: 40px 20px;
-    }
-  </style>
-</head>
-<body>
-
-  <header id="navbar" class="transparent">
-    <div class="logo">Moonboy</div>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#work">My Work</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="hero" id="home">
-    <video src="your-promo.mp4" autoplay muted loop></video>
-    <div class="overlay"></div>
-    <div class="content">
-      <h1>Moonboy Editing</h1>
-      <p>Professional YouTube Video Editing • Montages · Vlogs · Cinematic Cuts</p>
-      <a href="#work" class="btn">See My Work</a>
-    </div>
-  </section>
-
-  <!-- ABOUT ME SECTION -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p style="color:#aaa;margin-bottom:20px;">
-      Hey! I’m <strong>Moonboy</strong> — a passionate video editor with years of experience creating high-quality, engaging YouTube content.
-      I specialize in turning ordinary clips into extraordinary moments. From gaming montages to cinematic storylines, I bring creativity,
-      precision, and a deep understanding of pacing and rhythm into every edit I do.
-    </p>
-    <p style="color:#aaa;margin-bottom:20px;">
-      I work with tools like <strong>Premiere Pro</strong>, <strong>DaVinci Resolve</strong>, and <strong>After Effects</strong> to craft
-      smooth transitions, impactful sound design, and visually stunning effects that keep viewers watching till the end.
-      Whether it’s a short montage, a vlog, or a promotional edit — my goal is always the same:
-      to make your content unforgettable.
-    </p>
-
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;margin-top:30px;">
-      <div>
-        <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=900&q=60"
-             alt="Moonboy editing at work"
-             style="width:100%;border-radius:12px;">
-      </div>
-      <div>
-        <h3>My Strengths</h3>
-        <ul style="line-height:1.8;color:#bbb;">
-          <li>Clean and cinematic editing style</li>
-          <li>Strong sense of timing, flow, and pacing</li>
-          <li>Sound design and SFX synchronization</li>
-          <li>Motion graphics & dynamic transitions</li>
-          <li>Professional color grading and LUT creation</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- MY WORK SECTION -->
-  <section id="work">
-    <h2>My Work</h2>
-    <p style="color:#aaa;margin-bottom:24px;">Here’s one of my favorite edits — feel free to check it out!</p>
-
-    <div style="text-align:center;">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Rick Roll - Moonboy Edit"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              style="border-radius:12px;max-width:100%;">
-      </iframe>
-      <p style="color:#888;margin-top:12px;">Rick Astley - Never Gonna Give You Up (Remix Edit by Moonboy)</p>
-    </div>
-
-    <div style="text-align:center;margin-top:30px;">
-      <a href="#contact" style="background:#e10600;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:bold;">
-        Want to collaborate? Contact me
-      </a>
-    </div>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section id="contact" style="max-width:800px;">
-    <h2>Contact Me</h2>
-    <p style="color:#aaa;margin-bottom:24px;">Interested in working together? You can reach me below 👇</p>
-
-    <div style="background:rgba(255,255,255,0.05);padding:20px;border-radius:10px;">
-      <p><strong>📧 Gmail:</strong> <a href="mailto:liowyanmoon8@gmail.com" style="color:#e10600;">liowyanmoon8@gmail.com</a></p>
-      <p><strong>💬 Discord:</strong> <span style="color:#e10600;">liow1109</span></p>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Moonboy Editing. All rights reserved.</p>
-  </footer>
-
-  <script>
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.remove('transparent');
-        navbar.classList.add('solid');
-      } else {
-        navbar.classList.remove('solid');
-        navbar.classList.add('transparent');
-      }
-    });
-  </script>
-
-</body>
-</html>
+    .hero .editor-prof
 
 
