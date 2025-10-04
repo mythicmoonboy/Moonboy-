@@ -124,7 +124,7 @@
     <div class="content">
       <h1>Moonboy Editing</h1>
       <p>Professional YouTube Video Editing • Montages · Vlogs · Cinematic Cuts</p>
-      <div class="editor-profile">\Editor Quote Creative • Precise • Passionate</div>
+      <div class="editor-profile">Editor Profile: Creative • Precise • Passionate</div>
     </div>
   </section>
 
@@ -179,33 +179,67 @@
     </div>
   </section>
 
-  <!-- CONTACT SECTION -->
-  <section id="contact" style="max-width:800px;">
-    <h2>Contact Me</h2>
-    <p style="color:#aaa;margin-bottom:24px;">Interested in working together? You can reach me below 👇</p>
+ <!-- CONTACT SECTION -->
+<section id="contact" style="max-width:800px;">
+  <h2>Contact Me</h2>
+  <p style="color:#aaa;margin-bottom:24px;">Interested in working together? Fill in the form below or reach me through Gmail/Discord 👇</p>
 
-    <div style="background:rgba(255,255,255,0.05);padding:20px;border-radius:10px;">
-      <p><strong>📧 Gmail:</strong> <a href="mailto:liowyanmoon8@gmail.com" style="color:#e10600;">liowyanmoon8@gmail.com</a></p>
-      <p><strong>💬 Discord:</strong> <span style="color:#e10600;">liow1109</span></p>
-    </div>
-  </section>
+  <!-- Contact Form -->
+  <form onsubmit="handleSubmit(event)" style="display:grid;gap:14px;margin-bottom:30px;">
+    <input id="name" type="text" placeholder="Your Name" required
+           style="padding:12px;border-radius:8px;border:none;background:rgba(255,255,255,0.08);color:white;">
+    
+    <input id="email" type="email" placeholder="Your Email" required
+           style="padding:12px;border-radius:8px;border:none;background:rgba(255,255,255,0.08);color:white;">
+    
+    <select id="service" required
+            style="padding:12px;border-radius:8px;border:none;background:rgba(255,255,255,0.08);color:white;">
+      <option value="" disabled selected>What type of editing do you need?</option>
+      <option>Gaming Montage</option>
+      <option>Vlog / Lifestyle Edit</option>
+      <option>Promotional / Brand Video</option>
+      <option>Cinematic / Short Film</option>
+      <option>Other</option>
+    </select>
+    
+    <textarea id="message" placeholder="Tell me more about your project..." rows="5"
+              style="padding:12px;border-radius:8px;border:none;background:rgba(255,255,255,0.08);color:white;"></textarea>
+    
+    <button type="submit"
+            style="padding:12px;background:#e10600;color:white;border:none;border-radius:8px;font-weight:bold;cursor:pointer;">
+      Send Message
+    </button>
+  </form>
 
-  <footer>
-    <p>© 2025 Moonboy Editing. All rights reserved.</p>
-  </footer>
+  <!-- Direct Contact Info -->
+  <div style="background:rgba(255,255,255,0.05);padding:20px;border-radius:10px;">
+    <p><strong>📧 Gmail:</strong> <a href="mailto:liowyanmoon8@gmail.com" style="color:#e10600;">liowyanmoon8@gmail.com</a></p>
+    <p><strong>💬 Discord:</strong> <span style="color:#e10600;">liow1109</span></p>
+  </div>
+</section>
 
-  <script>
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.remove('transparent');
-        navbar.classList.add('solid');
-      } else {
-        navbar.classList.remove('solid');
-        navbar.classList.add('transparent');
-      }
-    });
-  </script>
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const service = document.getElementById('service').value;
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !service) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+
+    const mailto = `mailto:liowyanmoon8@gmail.com?subject=${encodeURIComponent('New Project Inquiry: ' + service)}&body=${encodeURIComponent(
+      'Name: ' + name + '\nEmail: ' + email + '\n\nService Requested: ' + service + '\n\nMessage:\n' + message
+    )}`;
+
+    window.location.href = mailto;
+  }
+</script>
+
 
 </body>
 </html>
+
