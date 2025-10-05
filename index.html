@@ -178,25 +178,45 @@
  <!-- CONTACT SECTION -->
 <section id="contact" style="max-width:800px;">
   <h2>Contact Me</h2>
-  <p style="color:#aaa;margin-bottom:24px;">Interested in working together? Fill in the form below or reach me through Gmail/Discord 👇</p>
+  <p style="color:#aaa;margin-bottom:24px;">Interested in working together? You can reach me below 👇</p>
 
-  <!-- Contact Form -->
-  <form onsubmit="handleSubmit(event)" style="display:grid;gap:14px;margin-bottom:30px;">
-    <input id="name" type="text" placeholder="Your Name" required
-           style="padding:12px;border-radius:8px;border:none;background:rgba(255,255,255,0.08);color:white;">
-    
-    <input id="email" type="email" placeholder="Your Email" required
-           style="padding:12px;border-radius:8px;border:none;background:rgba(255,255,255,0.08);color:white;">
-    
-    <select id="service" required
-            style="padding:12px;border-radius:8px;border:none;background:rgba(255,255,255,0.08);color:white;">
-      <option value="" disabled selected>What type of editing do you need?</option>
-      <option>Gaming Montage</option>
-      <option>Vlog / Lifestyle Edit</option>
-      <option>Promotional / Brand Video</option>
-      <option>Cinematic / Short Film</option>
-      <option>Other</option>
+  <div style="background:rgba(255,255,255,0.05);padding:20px;border-radius:10px;margin-bottom:30px;">
+    <p><strong>📧 Gmail:</strong> <a href="mailto:liowyanmoon8@gmail.com" style="color:#e10600;">liowyanmoon8@gmail.com</a></p>
+    <p><strong>💬 Discord:</strong> <span style="color:#e10600;">liow1109</span></p>
+  </div>
+
+  <form style="display:flex;flex-direction:column;gap:16px;background:rgba(255,255,255,0.05);padding:20px;border-radius:10px;">
+    <label for="name" style="color:#fff;">Your Name</label>
+    <input id="name" name="name" type="text" placeholder="Enter your name" required
+      style="padding:10px;border:none;border-radius:6px;background:rgba(255,255,255,0.1);color:#fff;">
+
+    <label for="email" style="color:#fff;">Your Email</label>
+    <input id="email" name="email" type="email" placeholder="Enter your email" required
+      style="padding:10px;border:none;border-radius:6px;background:rgba(255,255,255,0.1);color:#fff;">
+
+    <label for="edit-type" style="color:#fff;">Type of Edit</label>
+    <select id="edit-type" name="edit-type" required
+      style="padding:10px;border:none;border-radius:6px;background:rgba(255,255,255,0.1);color:#e10600;">
+      <option value="" disabled selected>Select the type of edit</option>
+      <option value="gaming">Gaming Montage</option>
+      <option value="vlog">Vlog / Lifestyle</option>
+      <option value="cinematic">Cinematic / Short Film</option>
+      <option value="music">Music Video</option>
+      <option value="other">Other</option>
     </select>
+
+    <label for="message" style="color:#fff;">Your Message</label>
+    <textarea id="message" name="message" placeholder="Describe your project or questions..."
+      rows="5" required
+      style="padding:10px;border:none;border-radius:6px;background:rgba(255,255,255,0.1);color:#fff;"></textarea>
+
+    <button type="submit"
+      style="padding:12px;background-color:#e10600;color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:bold;">
+      Send Message
+    </button>
+  </form>
+</section>
+
     
     <textarea id="message" placeholder="Tell me more about your project..." rows="5"
               style="padding:12px;border-radius:8px;border:none;background:rgba(255,255,255,0.08);color:white;"></textarea>
