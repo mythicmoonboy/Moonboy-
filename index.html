@@ -30,14 +30,14 @@
       align-items: center;
       padding: 20px 40px;
       z-index: 100;
-      transition: background-color 0.3s ease;
+      background-color: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
     }
-    header.transparent { background-color: rgba(0, 0, 0, 0.2); }
-    header.solid { background-color: var(--black); box-shadow: 0 2px 10px rgba(0,0,0,0.4); }
     .logo { font-size: 24px; font-weight: bold; color: var(--red); }
     nav ul { list-style: none; display: flex; gap: 24px; }
-    nav ul li a { padding: 6px 10px; border-radius: 4px; }
+    nav ul li a { padding: 6px 10px; border-radius: 4px; transition: background 0.3s; }
     nav ul li a:hover { background-color: rgba(255,255,255,0.1); }
+
     .hero {
       position: relative;
       width: 100%;
@@ -59,7 +59,6 @@
       position: absolute;
       inset: 0;
       background: rgba(0,0,0,0.4);
-      z-index: 0;
     }
     .hero .content {
       position: relative;
@@ -72,30 +71,11 @@
       text-align: center;
       padding: 0 20px;
     }
-    .hero h1 { 
-      font-size: 3rem; 
-      margin-bottom: 1rem; 
-      max-width: 700px; 
-      text-shadow: 0 0 20px rgba(0,0,0,0.7);
-    }
-    .hero p { 
-      font-size: 1.2rem; 
-      color: var(--muted); 
-      margin-bottom: 1rem; 
-    }
-    .hero .editor-profile {
-      font-size: 1rem;
-      color: rgba(255,255,255,0.5);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-top: 10px;
-      font-style: italic;
-    }
-    section {
-      padding: 80px 20px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; max-width: 700px; text-shadow: 0 0 20px rgba(0,0,0,0.7); }
+    .hero p { font-size: 1.2rem; color: var(--muted); margin-bottom: 1rem; }
+    .hero .editor-profile { font-size: 1rem; color: rgba(255,255,255,0.5); letter-spacing: 2px; text-transform: uppercase; margin-top: 10px; font-style: italic; }
+
+    section { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
     footer {
       background-color: var(--black);
       color: var(--muted);
@@ -106,202 +86,131 @@
 </head>
 <body>
 
-  <header id="navbar" class="transparent">
+  <!-- NAVIGATION -->
+  <header id="navbar">
     <div class="logo">Moonboy</div>
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About Me</a></li>
         <li><a href="#work">My Work</a></li>
+        <li><a href="#pricing">Pricing</a></li> <!-- ✅ Added this -->
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- HERO -->
   <section class="hero" id="home">
     <video src="your-promo.mp4" autoplay muted loop></video>
     <div class="overlay"></div>
     <div class="content">
       <h1>Moonboy Editing</h1>
       <p>Professional YouTube Video Editing • Montages · Vlogs · Cinematic Cuts</p>
-      <div class="editor-profile">Editor Quote: Creative • Precise • Passionate</div>
+      <div class="editor-profile">Creative • Precise • Passionate</div>
     </div>
   </section>
 
-  <!-- ABOUT ME SECTION -->
-<section id="about">
-  <h2>About Me</h2>
-  <p style="color:#aaa;margin-bottom:20px;">
-    Hey! I’m <strong>Moonboy</strong> — a passionate video editor with years of experience creating high-quality, engaging YouTube content.
-    I specialize in turning ordinary clips into extraordinary moments. From gaming montages to cinematic storylines, I bring creativity,
-    precision, and a deep understanding of pacing and rhythm into every edit I do.
-  </p>
-  <p style="color:#aaa;margin-bottom:20px;">
-    I work with <strong>CapCut</strong> to craft smooth transitions, impactful sound design, and visually stunning effects that keep viewers watching till the end.
-    Whether it’s a short montage, a vlog, or a promotional edit — my goal is always the same:
-    to make your content unforgettable.
-  </p>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="color:#aaa;margin-bottom:20px;">
+      Hey! I’m <strong>Moonboy</strong> — a passionate video editor with experience creating high-quality, engaging YouTube content.
+      I specialize in turning ordinary clips into extraordinary moments with creative pacing, motion, and sound design.
+    </p>
+    <p style="color:#aaa;margin-bottom:20px;">
+      I work with <strong>CapCut</strong> to craft smooth transitions, impactful sound design, and visually stunning effects that keep viewers hooked.
+      Whether it’s a short montage, vlog, or cinematic story — my goal is to make your content unforgettable.
+    </p>
+  </section>
 
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;margin-top:30px;">
-    <div>
-      <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=900&q=60"
-           alt="Moonboy editing at work"
-           style="width:100%;border-radius:12px;">
+  <!-- WORK -->
+  <section id="work">
+    <h2>My Work</h2>
+    <div style="text-align:center;margin-top:40px;">
+      <p style="font-size:1.2rem;color:#e10600;font-weight:bold;">🎬 New edits coming soon!</p>
+      <p style="color:#888;margin-top:8px;">Follow me for updates on YouTube and Discord.</p>
     </div>
-    <div>
-      <h3>My Strengths</h3>
-      <ul style="line-height:1.8;color:#bbb;">
-        <li>Clean and cinematic editing style</li>
-        <li>Strong sense of timing, flow, and pacing</li>
-        <li>Sound design and SFX synchronization</li>
-        <li>Motion graphics & dynamic transitions</li>
-        <li>Professional color grading and LUT creation</li>
-      </ul>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" style="padding:80px 20px;background:rgba(15,15,15,0.8);text-align:center;">
+    <h2 style="font-size:2.5rem;color:#fff;margin-bottom:10px;">Pricing</h2>
+    <p style="color:#ccc;margin-bottom:50px;">Choose the perfect plan for your content</p>
+
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;max-width:1100px;margin:0 auto;">
+
+      <!-- Starter -->
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:40px 25px;width:250px;">
+        <h3>Starter</h3>
+        <p style="font-size:2rem;font-weight:bold;color:#e10600;margin:10px 0;">Free</p>
+        <p style="color:#bbb;font-size:0.9rem;">For channels under 100 subs</p>
+        <ul style="list-style:none;padding:0;margin:20px 0;color:#ccc;line-height:1.8;">
+          <li>1 short edit (under 30s)</li>
+          <li>Basic transitions</li>
+          <li>1080p quality</li>
+          <li>3-day delivery</li>
+        </ul>
+        <a href="#contact" style="display:inline-block;background:#e10600;color:#fff;padding:10px 25px;border-radius:25px;text-decoration:none;">Order Now</a>
+      </div>
+
+      <!-- Basic -->
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:40px 25px;width:250px;">
+        <h3>Basic</h3>
+        <p style="font-size:2rem;font-weight:bold;color:#e10600;margin:10px 0;">$15</p>
+        <ul style="list-style:none;padding:0;margin:20px 0;color:#ccc;line-height:1.8;">
+          <li>1 short edit (under 1 min)</li>
+          <li>1080p HD</li>
+          <li>2 revisions</li>
+          <li>Basic color correction</li>
+          <li>3-day delivery</li>
+        </ul>
+        <a href="#contact" style="display:inline-block;background:#e10600;color:#fff;padding:10px 25px;border-radius:25px;text-decoration:none;">Order Now</a>
+      </div>
+
+      <!-- Standard -->
+      <div style="background:rgba(255,255,255,0.1);border:2px solid #e10600;border-radius:20px;padding:40px 25px;width:250px;box-shadow:0 0 20px rgba(225,6,0,0.3);">
+        <h3>Standard</h3>
+        <p style="font-size:2rem;font-weight:bold;color:#e10600;margin:10px 0;">$30</p>
+        <ul style="list-style:none;padding:0;margin:20px 0;color:#ccc;line-height:1.8;">
+          <li>Up to 5-min video</li>
+          <li>4K quality</li>
+          <li>Sound design + motion effects</li>
+          <li>Unlimited revisions</li>
+          <li>2-day delivery</li>
+        </ul>
+        <a href="#contact" style="display:inline-block;background:#e10600;color:#fff;padding:10px 25px;border-radius:25px;text-decoration:none;">Order Now</a>
+      </div>
+
+      <!-- Premium -->
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:40px 25px;width:250px;">
+        <h3>Premium</h3>
+        <p style="font-size:2rem;font-weight:bold;color:#e10600;margin:10px 0;">$60</p>
+        <ul style="list-style:none;padding:0;margin:20px 0;color:#ccc;line-height:1.8;">
+          <li>Up to 10-min cinematic edit</li>
+          <li>4K HDR export</li>
+          <li>Advanced VFX & animation</li>
+          <li>Custom intro/outro + thumbnail</li>
+          <li>1-day delivery</li>
+        </ul>
+        <a href="#contact" style="display:inline-block;background:#e10600;color:#fff;padding:10px 25px;border-radius:25px;text-decoration:none;">Order Now</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- MY WORK SECTION -->
-<section id="work">
-  <h2>My Work</h2>
-  <div style="text-align:center;margin-top:40px;">
-    <p style="font-size:1.2rem;color:#e10600;font-weight:bold;">🎬 New edits coming soon!</p>
-    <p style="color:#888;margin-top:8px;">Follow me for updates on YouTube and Discord.</p>
-  </div>
-</section>
+  <!-- CONTACT -->
+  <section id="contact" style="max-width:800px;">
+    <h2>Contact Me</h2>
+    <p style="color:#aaa;margin-bottom:24px;">Interested in working together? You can reach me below 👇</p>
 
-<!-- ===== PRICING SECTION ===== -->
-<section id="pricing" style="padding:80px 20px;background:rgba(15,15,15,0.8);text-align:center;">
-  <h2 style="font-size:2.5rem;color:#fff;margin-bottom:10px;">Pricing</h2>
-  <p style="color:#ccc;margin-bottom:50px;">Choose the perfect plan for your content</p>
-
-  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;max-width:1100px;margin:0 auto;">
-
-    <!-- Starter Plan -->
-    <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:40px 25px;width:250px;backdrop-filter:blur(10px);transition:all 0.3s ease;">
-      <h3 style="font-size:1.6rem;color:#fff;">Starter</h3>
-      <p style="font-size:2rem;font-weight:bold;color:#e10600;margin:10px 0;">Free</p>
-      <p style="color:#bbb;font-size:0.9rem;">For channels under 100 subscribers</p>
-      <ul style="list-style:none;padding:0;margin:20px 0;color:#ccc;line-height:1.8;">
-        <li>1 short edit (under 30 seconds)</li>
-        <li>Basic transitions</li>
-        <li>1080p quality</li>
-        <li>3-day delivery</li>
-      </ul>
-      <a href="#contact" style="display:inline-block;background:#e10600;color:#fff;padding:10px 25px;border-radius:25px;text-decoration:none;transition:0.3s;">Order Now</a>
+    <div style="background:rgba(255,255,255,0.05);padding:20px;border-radius:10px;">
+      <p><strong>📧 Gmail:</strong> <a href="mailto:liowyanmoon8@gmail.com" style="color:#e10600;">liowyanmoon8@gmail.com</a></p>
+      <p><strong>💬 Discord:</strong> <span style="color:#e10600;">liow1109</span></p>
     </div>
+  </section>
 
-    <!-- Basic Plan -->
-    <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:40px 25px;width:250px;backdrop-filter:blur(10px);transition:all 0.3s ease;">
-      <h3 style="font-size:1.6rem;color:#fff;">Basic</h3>
-      <p style="font-size:2rem;font-weight:bold;color:#e10600;margin:10px 0;">$15</p>
-      <ul style="list-style:none;padding:0;margin:20px 0;color:#ccc;line-height:1.8;">
-        <li>1 short edit (under 1 minute)</li>
-        <li>1080p HD quality</li>
-        <li>2 revisions</li>
-        <li>Basic color correction</li>
-        <li>3-day delivery</li>
-      </ul>
-      <a href="#contact" style="display:inline-block;background:#e10600;color:#fff;padding:10px 25px;border-radius:25px;text-decoration:none;transition:0.3s;">Order Now</a>
-    </div>
-
-    <!-- Standard Plan -->
-    <div style="background:rgba(255,255,255,0.1);border:2px solid #e10600;border-radius:20px;padding:40px 25px;width:250px;backdrop-filter:blur(10px);transition:all 0.3s ease;box-shadow:0 0 20px rgba(225,6,0,0.3);">
-      <h3 style="font-size:1.6rem;color:#fff;">Standard</h3>
-      <p style="font-size:2rem;font-weight:bold;color:#e10600;margin:10px 0;">$30</p>
-      <ul style="list-style:none;padding:0;margin:20px 0;color:#ccc;line-height:1.8;">
-        <li>Up to 5-minute video</li>
-        <li>4K quality</li>
-        <li>Sound design & motion effects</li>
-        <li>Color grading & smooth transitions</li>
-        <li>Unlimited revisions</li>
-        <li>2-day delivery</li>
-      </ul>
-      <a href="#contact" style="display:inline-block;background:#e10600;color:#fff;padding:10px 25px;border-radius:25px;text-decoration:none;transition:0.3s;">Order Now</a>
-    </div>
-
-    <!-- Premium Plan -->
-    <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:40px 25px;width:250px;backdrop-filter:blur(10px);transition:all 0.3s ease;">
-      <h3 style="font-size:1.6rem;color:#fff;">Premium</h3>
-      <p style="font-size:2rem;font-weight:bold;color:#e10600;margin:10px 0;">$60</p>
-      <ul style="list-style:none;padding:0;margin:20px 0;color:#ccc;line-height:1.8;">
-        <li>Up to 10-minute cinematic edit</li>
-        <li>4K HDR export</li>
-        <li>Advanced VFX & animations</li>
-        <li>Professional color grading</li>
-        <li>Custom intro/outro + thumbnail</li>
-        <li>1-day delivery</li>
-        <li>VIP support</li>
-      </ul>
-      <a href="#contact" style="display:inline-block;background:#e10600;color:#fff;padding:10px 25px;border-radius:25px;text-decoration:none;transition:0.3s;">Order Now</a>
-    </div>
-
-  </div>
-</section>
-<!-- ===== END PRICING ===== -->
-
- <!-- CONTACT SECTION -->
-<section id="contact" style="max-width:800px;">
-  <h2>Contact Me</h2>
-  <p style="color:#aaa;margin-bottom:24px;">Interested in working together? You can reach me below 👇</p>
-
-  <div style="background:rgba(255,255,255,0.05);padding:20px;border-radius:10px;margin-bottom:30px;">
-    <p><strong>📧 Gmail:</strong> <a href="mailto:liowyanmoon8@gmail.com" style="color:#e10600;">liowyanmoon8@gmail.com</a></p>
-    <p><strong>💬 Discord:</strong> <span style="color:#e10600;">liow1109</span></p>
-  </div>
-
-  <form onsubmit="handleSubmit(event)" style="display:flex;flex-direction:column;gap:16px;background:rgba(255,255,255,0.05);padding:20px;border-radius:10px;">
-    <label for="name" style="color:#fff;">Your Name</label>
-    <input id="name" name="name" type="text" placeholder="Enter your name" required
-      style="padding:10px;border:none;border-radius:6px;background:rgba(255,255,255,0.1);color:#fff;">
-
-    <label for="email" style="color:#fff;">Your Email</label>
-    <input id="email" name="email" type="email" placeholder="Enter your email" required
-      style="padding:10px;border:none;border-radius:6px;background:rgba(255,255,255,0.1);color:#fff;">
-
-    <label for="edit-type" style="color:#fff;">Type of Edit</label>
-    <select id="service" name="service" required
-      style="padding:10px;border:none;border-radius:6px;background:rgba(255,255,255,0.1);color:#e10600;">
-      <option value="" disabled selected>Select the type of edit</option>
-      <option value="gaming">Gaming Montage</option>
-      <option value="vlog">Vlog / Lifestyle</option>
-      <option value="cinematic">Cinematic / Short Film</option>
-      <option value="music">Music Video</option>
-      <option value="other">Other</option>
-    </select>
-
-    <label for="message" style="color:#fff;">Your Message</label>
-    <textarea id="message" name="message" placeholder="Describe your project or questions..."
-      rows="5" required
-      style="padding:10px;border:none;border-radius:6px;background:rgba(255,255,255,0.1);color:#fff;"></textarea>
-
-    <button type="submit"
-      style="padding:12px;background-color:#e10600;color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:bold;">
-      Send Message
-    </button>
-  </form>
-</section>
-
-<script>
-  function handleSubmit(e) {
-    e.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const service = document.getElementById('service').value;
-    const message = document.getElementById('message').value.trim();
-
-    if (!name || !email || !service) {
-      alert('Please fill in all required fields.');
-      return;
-    }
-
-    const mailto = `mailto:liowyanmoon8@gmail.com?subject=${encodeURIComponent('New Project Inquiry: ' + service)}&body=${encodeURIComponent(
-      'Name: ' + name + '\nEmail: ' + email + '\n\nService Requested: ' + service + '\n\nMessage:\n' + message
-    )}`;
-
-    window.location.href = mailto;
-  }
-</script>
-
+  <footer>
+    © Monboy. All Rights Reserved.
+  </footer>
 </body>
 </html>
