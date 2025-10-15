@@ -90,6 +90,7 @@
       background: rgba(255,255,255,0.1);
       color: #fff;
     }
+    select { color: var(--red); font-weight: bold; }
     button {
       background: var(--red);
       color: #fff;
@@ -98,24 +99,6 @@
       border-radius: 25px;
       cursor: pointer;
       font-size: 1rem;
-    }
-
-    /* 🔥 Highlight for Selected Plan input */
-    #plan {
-      background: rgba(225, 0, 50, 0.15);
-      color: #ff3355;
-      font-weight: bold;
-      outline: 2px solid #ff3355;
-    }
-    #plan:focus, #plan:not(:placeholder-shown) {
-      box-shadow: 0 0 10px #ff3355;
-      transition: box-shadow 0.3s ease-in-out;
-    }
-
-    /* 🎬 Style for "What type of editing" */
-    label[for="edit-type"] {
-      color: #e10600;
-      font-weight: bold;
     }
   </style>
 </head>
@@ -257,7 +240,7 @@
       <label for="email">Your Email</label>
       <input id="email" name="_replyto" type="email" placeholder="Enter your email" required>
 
-      <label for="edit-type">🎬 What Type of Editing Do You Want?</label>
+      <label for="edit-type">What type of editing do you want?</label>
       <select id="edit-type" name="edit-type" required>
         <option value="" disabled selected>Select a type</option>
         <option value="gaming">Gaming Montage</option>
@@ -298,5 +281,6 @@
   </script>
 </body>
 </html>
+
 
 
