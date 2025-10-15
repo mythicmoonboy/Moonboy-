@@ -161,16 +161,84 @@
   </div>
 </section>
 
-
-  <!-- MY WORK SECTION -->
+<!-- MY WORK SECTION -->
 <section id="work">
   <h2>My Work</h2>
- 
   <div style="text-align:center;margin-top:40px;">
     <p style="font-size:1.2rem;color:#e10600;font-weight:bold;">🎬 New edits coming soon!</p>
     <p style="color:#888;margin-top:8px;">Follow me for updates on YouTube and Discord.</p>
   </div>
 </section>
+
+<!-- ===== PRICING SECTION ===== -->
+<section id="pricing" style="padding:80px 20px;background:rgba(15,15,15,0.8);text-align:center;">
+  <h2 style="font-size:2.5rem;color:#fff;margin-bottom:10px;">Pricing</h2>
+  <p style="color:#ccc;margin-bottom:50px;">Choose the perfect plan for your content</p>
+
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;max-width:1100px;margin:0 auto;">
+
+    <!-- Starter Plan -->
+    <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:40px 25px;width:250px;backdrop-filter:blur(10px);transition:all 0.3s ease;">
+      <h3 style="font-size:1.6rem;color:#fff;">Starter</h3>
+      <p style="font-size:2rem;font-weight:bold;color:#e10600;margin:10px 0;">Free</p>
+      <p style="color:#bbb;font-size:0.9rem;">For channels under 100 subscribers</p>
+      <ul style="list-style:none;padding:0;margin:20px 0;color:#ccc;line-height:1.8;">
+        <li>1 short edit (under 30 seconds)</li>
+        <li>Basic transitions</li>
+        <li>1080p quality</li>
+        <li>3-day delivery</li>
+      </ul>
+      <a href="#contact" style="display:inline-block;background:#e10600;color:#fff;padding:10px 25px;border-radius:25px;text-decoration:none;transition:0.3s;">Order Now</a>
+    </div>
+
+    <!-- Basic Plan -->
+    <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:40px 25px;width:250px;backdrop-filter:blur(10px);transition:all 0.3s ease;">
+      <h3 style="font-size:1.6rem;color:#fff;">Basic</h3>
+      <p style="font-size:2rem;font-weight:bold;color:#e10600;margin:10px 0;">$15</p>
+      <ul style="list-style:none;padding:0;margin:20px 0;color:#ccc;line-height:1.8;">
+        <li>1 short edit (under 1 minute)</li>
+        <li>1080p HD quality</li>
+        <li>2 revisions</li>
+        <li>Basic color correction</li>
+        <li>3-day delivery</li>
+      </ul>
+      <a href="#contact" style="display:inline-block;background:#e10600;color:#fff;padding:10px 25px;border-radius:25px;text-decoration:none;transition:0.3s;">Order Now</a>
+    </div>
+
+    <!-- Standard Plan -->
+    <div style="background:rgba(255,255,255,0.1);border:2px solid #e10600;border-radius:20px;padding:40px 25px;width:250px;backdrop-filter:blur(10px);transition:all 0.3s ease;box-shadow:0 0 20px rgba(225,6,0,0.3);">
+      <h3 style="font-size:1.6rem;color:#fff;">Standard</h3>
+      <p style="font-size:2rem;font-weight:bold;color:#e10600;margin:10px 0;">$30</p>
+      <ul style="list-style:none;padding:0;margin:20px 0;color:#ccc;line-height:1.8;">
+        <li>Up to 5-minute video</li>
+        <li>4K quality</li>
+        <li>Sound design & motion effects</li>
+        <li>Color grading & smooth transitions</li>
+        <li>Unlimited revisions</li>
+        <li>2-day delivery</li>
+      </ul>
+      <a href="#contact" style="display:inline-block;background:#e10600;color:#fff;padding:10px 25px;border-radius:25px;text-decoration:none;transition:0.3s;">Order Now</a>
+    </div>
+
+    <!-- Premium Plan -->
+    <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:40px 25px;width:250px;backdrop-filter:blur(10px);transition:all 0.3s ease;">
+      <h3 style="font-size:1.6rem;color:#fff;">Premium</h3>
+      <p style="font-size:2rem;font-weight:bold;color:#e10600;margin:10px 0;">$60</p>
+      <ul style="list-style:none;padding:0;margin:20px 0;color:#ccc;line-height:1.8;">
+        <li>Up to 10-minute cinematic edit</li>
+        <li>4K HDR export</li>
+        <li>Advanced VFX & animations</li>
+        <li>Professional color grading</li>
+        <li>Custom intro/outro + thumbnail</li>
+        <li>1-day delivery</li>
+        <li>VIP support</li>
+      </ul>
+      <a href="#contact" style="display:inline-block;background:#e10600;color:#fff;padding:10px 25px;border-radius:25px;text-decoration:none;transition:0.3s;">Order Now</a>
+    </div>
+
+  </div>
+</section>
+<!-- ===== END PRICING ===== -->
 
  <!-- CONTACT SECTION -->
 <section id="contact" style="max-width:800px;">
@@ -182,7 +250,7 @@
     <p><strong>💬 Discord:</strong> <span style="color:#e10600;">liow1109</span></p>
   </div>
 
-  <form style="display:flex;flex-direction:column;gap:16px;background:rgba(255,255,255,0.05);padding:20px;border-radius:10px;">
+  <form onsubmit="handleSubmit(event)" style="display:flex;flex-direction:column;gap:16px;background:rgba(255,255,255,0.05);padding:20px;border-radius:10px;">
     <label for="name" style="color:#fff;">Your Name</label>
     <input id="name" name="name" type="text" placeholder="Enter your name" required
       style="padding:10px;border:none;border-radius:6px;background:rgba(255,255,255,0.1);color:#fff;">
@@ -192,7 +260,7 @@
       style="padding:10px;border:none;border-radius:6px;background:rgba(255,255,255,0.1);color:#fff;">
 
     <label for="edit-type" style="color:#fff;">Type of Edit</label>
-    <select id="edit-type" name="edit-type" required
+    <select id="service" name="service" required
       style="padding:10px;border:none;border-radius:6px;background:rgba(255,255,255,0.1);color:#e10600;">
       <option value="" disabled selected>Select the type of edit</option>
       <option value="gaming">Gaming Montage</option>
@@ -212,23 +280,6 @@
       Send Message
     </button>
   </form>
-</section>
-
-    
-    <textarea id="message" placeholder="Tell me more about your project..." rows="5"
-              style="padding:12px;border-radius:8px;border:none;background:rgba(255,255,255,0.08);color:white;"></textarea>
-    
-    <button type="submit"
-            style="padding:12px;background:#e10600;color:white;border:none;border-radius:8px;font-weight:bold;cursor:pointer;">
-      Send Message
-    </button>
-  </form>
-
-  <!-- Direct Contact Info -->
-  <div style="background:rgba(255,255,255,0.05);padding:20px;border-radius:10px;">
-    <p><strong>📧 Gmail:</strong> <a href="mailto:liowyanmoon8@gmail.com" style="color:#e10600;">liowyanmoon8@gmail.com</a></p>
-    <p><strong>💬 Discord:</strong> <span style="color:#e10600;">liow1109</span></p>
-  </div>
 </section>
 
 <script>
@@ -252,7 +303,5 @@
   }
 </script>
 
-
 </body>
 </html>
-
