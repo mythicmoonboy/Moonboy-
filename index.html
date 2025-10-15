@@ -71,7 +71,7 @@
       text-align: center;
       padding: 0 20px;
     }
-    .hero h1 { font-size: 3rem; margin-bottom: 1rem; max-width: 700px; text-shadow: 0 0 20px rgba(0,0,0,0.7); }
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 0 0 20px rgba(0,0,0,0.7); }
     .hero p { font-size: 1.2rem; color: var(--muted); margin-bottom: 1rem; }
     .hero .editor-profile { font-size: 1rem; color: rgba(255,255,255,0.5); letter-spacing: 2px; text-transform: uppercase; margin-top: 10px; font-style: italic; }
 
@@ -82,19 +82,54 @@
       text-align: center;
       padding: 40px 20px;
     }
+
+    /* PRICING STYLES */
+    .pricing-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .pricing-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 40px 25px;
+      width: 250px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .pricing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(225,6,0,0.3);
+    }
+    .pricing-card.featured {
+      background: rgba(255,255,255,0.1);
+      border: 2px solid #e10600;
+      box-shadow: 0 0 20px rgba(225,6,0,0.3);
+    }
+    .order-btn {
+      display:inline-block;
+      background:#e10600;
+      color:#fff;
+      padding:10px 25px;
+      border-radius:25px;
+      text-decoration:none;
+    }
   </style>
 </head>
 <body>
 
   <!-- NAVIGATION -->
-  <header id="navbar">
+  <header>
     <div class="logo">Moonboy</div>
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About Me</a></li>
         <li><a href="#work">My Work</a></li>
-        <li><a href="#pricing">Pricing</a></li> <!-- ✅ Added this -->
+        <li><a href="#pricing">Pricing</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -115,12 +150,8 @@
   <section id="about">
     <h2>About Me</h2>
     <p style="color:#aaa;margin-bottom:20px;">
-      Hey! I’m <strong>Moonboy</strong> — a passionate video editor with experience creating high-quality, engaging YouTube content.
-      I specialize in turning ordinary clips into extraordinary moments with creative pacing, motion, and sound design.
-    </p>
-    <p style="color:#aaa;margin-bottom:20px;">
-      I work with <strong>CapCut</strong> to craft smooth transitions, impactful sound design, and visually stunning effects that keep viewers hooked.
-      Whether it’s a short montage, vlog, or cinematic story — my goal is to make your content unforgettable.
+      Hey! I’m <strong>Moonboy</strong> — a passionate video editor who turns ordinary clips into extraordinary moments.
+      I bring creativity, pacing, and rhythm into every edit I do.
     </p>
   </section>
 
@@ -134,66 +165,58 @@
   </section>
 
   <!-- PRICING -->
-  <section id="pricing" style="padding:80px 20px;background:rgba(15,15,15,0.8);text-align:center;">
+  <section id="pricing" style="text-align:center;">
     <h2 style="font-size:2.5rem;color:#fff;margin-bottom:10px;">Pricing</h2>
-    <p style="color:#ccc;margin-bottom:50px;">Choose the perfect plan for your content</p>
+    <p style="color:#ccc;margin-bottom:50px;">Choose the plan that fits your goals</p>
 
-    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;max-width:1100px;margin:0 auto;">
-
-      <!-- Starter -->
-      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:40px 25px;width:250px;">
+    <div class="pricing-container">
+      <div class="pricing-card">
         <h3>Starter</h3>
-        <p style="font-size:2rem;font-weight:bold;color:#e10600;margin:10px 0;">Free</p>
+        <p style="font-size:2rem;font-weight:bold;color:#e10600;">Free</p>
         <p style="color:#bbb;font-size:0.9rem;">For channels under 100 subs</p>
-        <ul style="list-style:none;padding:0;margin:20px 0;color:#ccc;line-height:1.8;">
-          <li>1 short edit (under 30s)</li>
+        <ul style="color:#ccc;line-height:1.8;margin:20px 0;">
+          <li>1 short edit (30s)</li>
           <li>Basic transitions</li>
           <li>1080p quality</li>
           <li>3-day delivery</li>
         </ul>
-        <a href="#contact" style="display:inline-block;background:#e10600;color:#fff;padding:10px 25px;border-radius:25px;text-decoration:none;">Order Now</a>
+        <a href="#contact" class="order-btn" data-plan="Starter Plan">Order Now</a>
       </div>
 
-      <!-- Basic -->
-      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:40px 25px;width:250px;">
+      <div class="pricing-card">
         <h3>Basic</h3>
-        <p style="font-size:2rem;font-weight:bold;color:#e10600;margin:10px 0;">$15</p>
-        <ul style="list-style:none;padding:0;margin:20px 0;color:#ccc;line-height:1.8;">
-          <li>1 short edit (under 1 min)</li>
+        <p style="font-size:2rem;font-weight:bold;color:#e10600;">$15</p>
+        <ul style="color:#ccc;line-height:1.8;margin:20px 0;">
+          <li>1 short edit (1 min)</li>
           <li>1080p HD</li>
           <li>2 revisions</li>
-          <li>Basic color correction</li>
           <li>3-day delivery</li>
         </ul>
-        <a href="#contact" style="display:inline-block;background:#e10600;color:#fff;padding:10px 25px;border-radius:25px;text-decoration:none;">Order Now</a>
+        <a href="#contact" class="order-btn" data-plan="Basic Plan">Order Now</a>
       </div>
 
-      <!-- Standard -->
-      <div style="background:rgba(255,255,255,0.1);border:2px solid #e10600;border-radius:20px;padding:40px 25px;width:250px;box-shadow:0 0 20px rgba(225,6,0,0.3);">
+      <div class="pricing-card featured">
         <h3>Standard</h3>
-        <p style="font-size:2rem;font-weight:bold;color:#e10600;margin:10px 0;">$30</p>
-        <ul style="list-style:none;padding:0;margin:20px 0;color:#ccc;line-height:1.8;">
+        <p style="font-size:2rem;font-weight:bold;color:#e10600;">$30</p>
+        <ul style="color:#ccc;line-height:1.8;margin:20px 0;">
           <li>Up to 5-min video</li>
           <li>4K quality</li>
           <li>Sound design + motion effects</li>
           <li>Unlimited revisions</li>
-          <li>2-day delivery</li>
         </ul>
-        <a href="#contact" style="display:inline-block;background:#e10600;color:#fff;padding:10px 25px;border-radius:25px;text-decoration:none;">Order Now</a>
+        <a href="#contact" class="order-btn" data-plan="Standard Plan">Order Now</a>
       </div>
 
-      <!-- Premium -->
-      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:40px 25px;width:250px;">
+      <div class="pricing-card">
         <h3>Premium</h3>
-        <p style="font-size:2rem;font-weight:bold;color:#e10600;margin:10px 0;">$60</p>
-        <ul style="list-style:none;padding:0;margin:20px 0;color:#ccc;line-height:1.8;">
-          <li>Up to 10-min cinematic edit</li>
-          <li>4K HDR export</li>
+        <p style="font-size:2rem;font-weight:bold;color:#e10600;">$60</p>
+        <ul style="color:#ccc;line-height:1.8;margin:20px 0;">
+          <li>Up to 10-min edit</li>
           <li>Advanced VFX & animation</li>
-          <li>Custom intro/outro + thumbnail</li>
+          <li>Custom intro/outro</li>
           <li>1-day delivery</li>
         </ul>
-        <a href="#contact" style="display:inline-block;background:#e10600;color:#fff;padding:10px 25px;border-radius:25px;text-decoration:none;">Order Now</a>
+        <a href="#contact" class="order-btn" data-plan="Premium Plan">Order Now</a>
       </div>
     </div>
   </section>
@@ -201,16 +224,46 @@
   <!-- CONTACT -->
   <section id="contact" style="max-width:800px;">
     <h2>Contact Me</h2>
-    <p style="color:#aaa;margin-bottom:24px;">Interested in working together? You can reach me below 👇</p>
+    <p style="color:#aaa;margin-bottom:24px;">Interested in working together? Fill out the form 👇</p>
 
-    <div style="background:rgba(255,255,255,0.05);padding:20px;border-radius:10px;">
-      <p><strong>📧 Gmail:</strong> <a href="mailto:liowyanmoon8@gmail.com" style="color:#e10600;">liowyanmoon8@gmail.com</a></p>
-      <p><strong>💬 Discord:</strong> <span style="color:#e10600;">liow1109</span></p>
+    <form action="https://formspree.io/f/your-endpoint" method="POST" style="display:flex;flex-direction:column;gap:16px;background:rgba(255,255,255,0.05);padding:20px;border-radius:10px;">
+      <label style="color:#fff;">Your Name</label>
+      <input name="name" type="text" required style="padding:10px;border:none;border-radius:6px;background:rgba(255,255,255,0.1);color:#fff;">
+
+      <label style="color:#fff;">Your Email</label>
+      <input name="_replyto" type="email" required style="padding:10px;border:none;border-radius:6px;background:rgba(255,255,255,0.1);color:#fff;">
+
+      <label style="color:#fff;">Selected Plan</label>
+      <input id="plan" name="plan" readonly placeholder="Auto-filled after clicking 'Order Now'" style="padding:10px;border:none;border-radius:6px;background:rgba(255,255,255,0.1);color:#fff;">
+
+      <label style="color:#fff;">Message</label>
+      <textarea name="message" rows="5" placeholder="Describe your project..." required style="padding:10px;border:none;border-radius:6px;background:rgba(255,255,255,0.1);color:#fff;"></textarea>
+
+      <button type="submit" style="padding:12px;background-color:#e10600;color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:bold;">
+        Send Inquiry
+      </button>
+    </form>
+
+    <div style="margin-top:25px;color:#ccc;text-align:center;">
+      <p>📧 Email: <strong>liowyanmoon8@gmail.com</strong></p>
+      <p>💬 Discord: <strong>liow1109</strong></p>
     </div>
   </section>
 
   <footer>
-    © Monboy. All Rights Reserved.
+    © Moonboy Editing. All Rights Reserved.
   </footer>
+
+  <script>
+    document.querySelectorAll('.order-btn').forEach(btn => {
+      btn.addEventListener('click', e => {
+        const plan = e.target.getAttribute('data-plan');
+        const input = document.getElementById('plan');
+        if (input) input.value = plan;
+      });
+    });
+  </script>
 </body>
 </html>
+
+
